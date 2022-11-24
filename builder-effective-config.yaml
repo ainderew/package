@@ -1,0 +1,21 @@
+directories:
+  output: dist
+  buildResources: resources
+appId: com.yourdoamnin.yourapp
+files:
+  - filter:
+      - assets/**/*
+      - build/**/*
+      - capacitor.config.*
+      - app/**/*
+nsis:
+  allowElevation: true
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+win:
+  target: nsis
+  icon: assets/appIcon.ico
+mac:
+  category: your.app.category.type
+  target: dmg
+electronVersion: 19.1.6
